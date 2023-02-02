@@ -86,6 +86,13 @@
         color: white;
         font-size: 16px;
         box-shadow: 0px 4px 5px 1px #cacbcb;
+        transform: scale(1);
+        transition : transform 250ms;
+
+    }
+
+    .plus_grand :hover{
+        transform: scale(1.02);
     }
 
     h1{
