@@ -92,7 +92,7 @@
     }
 
     .plus_grand :hover{
-        transform: scale(1.02);
+        transform: scale(1.05);
     }
 
     h1{
@@ -175,9 +175,22 @@
         cursor:pointer;
     }
 
+    .card_restaurant a{
+        text-decoration: none;
+        color: black;
+    }
+
     .nom_restaurant_coeur{
         padding-left:10px;
         line-height: 5px;
+    }
+
+    .fa-heart{
+        font-size: 25px;
+    }
+
+    .fa-heart:hover{
+        cursor: pointer;
     }
 
     .ville_restaurant{
@@ -288,6 +301,17 @@
         position: relative;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .titre_coeur{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .titre_coeur .fa-heart{
+        margin-left: 5px;
+        padding-top: 55px;
+        padding-right: 10px;
     }
 
     .nom_restaurant{
