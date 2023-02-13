@@ -238,8 +238,8 @@
         color: #fff;
         position: absolute;
         display: flex;
-        margin-top: -5px;
-        margin-left: -40px;
+        margin-top: -3px;
+        margin-left: -35px;
     }
 
     .etapes{
@@ -305,7 +305,7 @@
     .fa-heart{
         font-size: 25px;
         position: absolute;
-        right: 31px;
+        right: 15px;
     }
 
     .fa-heart:hover{
@@ -317,7 +317,7 @@
         transition-property: all;
         transition-duration: 300ms;
         position: absolute;
-        right: 31px;
+        right: 15px;
     }
 
     .coeur_rempli:hover{
@@ -425,6 +425,7 @@
     #img_restaurant{
         width: 100%;
         object-fit: cover;
+        max-height: 600px;
     }
 
     .menu{
@@ -457,7 +458,7 @@
     .fa-heart :active{
         animation: like 0.5s;
         animation-fill-mode: forwards;
-        background: linear-gradient(to bottom, #9356DC, #FF79DA);
+        background: linear-gradient(#FF79DA 0%, #9356DC 100%);
     }
 
     .categorie_plats{
@@ -508,20 +509,6 @@
     
     }
 
-    .card_1{
-        animation-delay: 50ms;
-
-    }
-
-    .card_2{
-        animation-delay: 250ms;
-
-    }
-
-    .card_3{
-        animation-delay: 450ms;
-    }
-
     .intitule_details_plat{
         line-height: 10px;
     }
@@ -567,10 +554,24 @@
         display: flex;
         justify-content: center;
         padding-top: 15px;
+        padding-bottom: 20px;
     }
 
-/*Responsive Version Desktop*/
-@media screen and (min-width: 992x) {
+    /*Responsive Version Tablette*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .liste_restaurants{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    }
+
+    /*Responsive Version Desktop*/
+@media screen and (min-width: 992px) {
 
     .liste_restaurants{
         display:flex;
@@ -579,20 +580,51 @@
         justify-content: space-between;
     }
 
-    .etapes_fonctionnement{
+    .card_restaurant{
+        margin: 5px;
+    }
+
+    ol{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 95%;
+    }
+
+    ol li::before{
+        counter-increment: compteListe 1;
+        content: counter(compteListe) " ";
+        background: #9356DC;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
         display: flex;
-        flex-direction: row;
+        margin-top: -3px;
+        margin-left: -50px;
     }
 
+    .etapes{
+        padding-right: 40px;
+        padding-left: 35px;
     }
 
-/*Responsive Version Tablette*/
-@media screen and (min-width: 768px) and (max-width: 992px) {
+    .centrer_titre_desktop{
+        text-align: center;
+    }
 
-    .liste_restaurants{
+    .alignement_plats{
         display:flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
+
+    .titre_coeur{
+        justify-content: center;
+    }
+    
     }
