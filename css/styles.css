@@ -44,7 +44,7 @@
     
     .loader-line-wrap {
         animation: 
-            spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+            spin 1500ms cubic-bezier(.175, .885, .32, 1.275) infinite
         ;
         box-sizing: border-box;
         height: 50px;
@@ -320,14 +320,16 @@
         right: 15px;
     }
 
-    .coeur_rempli:hover{
-        cursor: pointer;
+    .coeur_rempli:hover {
+        animation: fill 0.3s ease-in-out;
+        display: inline-block;
         opacity: 1;
-        background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-        background-clip: text;
+        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        }
+        font-weight: bold;
+      }
 
     .ville_restaurant{
         font-size: 14px;
@@ -455,12 +457,6 @@
         padding-top: 30px;
     }
 
-    .fa-heart :active{
-        animation: like 0.5s;
-        animation-fill-mode: forwards;
-        background: linear-gradient(#FF79DA 0%, #9356DC 100%);
-    }
-
     .categorie_plats{
         padding-bottom: 15px;
     }
@@ -497,6 +493,16 @@
         animation: apparition_plats 1s;
     }
 
+    .card_menu:hover .valider{
+        opacity: 1;
+        transform: translate(-50px);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .card_menu:hover .fa-circle-check{
+        transform: rotate(360deg);
+    }
+
     @keyframes apparition_plats {
         from {
             transform: translateY(20px);
@@ -507,6 +513,26 @@
             opacity: 1;
           }
     
+    }
+
+    .card_1{
+        animation-delay: 50ms;
+        animation-fill-mode: forwards;
+    }
+
+    .card_2{
+        animation-delay: 150ms;
+        animation-fill-mode: forwards;
+    }
+
+    .card_3{
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+    }
+
+    .card_4{
+        animation-delay: 350ms;
+        animation-fill-mode: forwards;
     }
 
     .intitule_details_plat{
@@ -541,13 +567,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: width 1s;
-    }
-
-    .fa-circle-check{
-        transform: rotate(360deg);
-        transition: transform 500ms ease-in-out;
-        font-weight: 900;
+        transition: width 500ms;
     }
 
     .commander{
