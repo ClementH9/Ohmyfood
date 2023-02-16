@@ -461,10 +461,6 @@
         padding-bottom: 15px;
     }
 
-    .apparition_plats{
-        animation: slideup 1s forwards;
-    }
-
     .libelle_menu{
         font-weight: normal;
         font-size: 16px;
@@ -488,19 +484,27 @@
         width: 98%;
         height: 70px;
         cursor:pointer;
-        transition: transform 330ms ease-in-out;
         animation-fill-mode: forwards;
-        animation: apparition_plats 1s;
+        animation: apparition_plats 1s ease-in-out;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .card_menu:hover .prix_plat{
+        margin-right: 25%; 
+        margin-left: 5%;
     }
 
     .card_menu:hover .valider{
-        opacity: 1;
-        transform: translate(-50px);
-        transition: transform 500ms ease-in-out;
+        right: 0px
     }
 
     .card_menu:hover .fa-circle-check{
-        transform: rotate(360deg);
+        transform: rotate(-720deg);
+    }
+
+    .card_menu .fa-circle-check{ 
+        transition: all 1s; 
     }
 
     @keyframes apparition_plats {
@@ -537,28 +541,34 @@
 
     .intitule_details_plat{
         line-height: 10px;
+        overflow: hidden;
     }
+
+    .intitule_details_plat p{ 
+        text-overflow: ellipsis; 
+        overflow: hidden; 
+        white-space: nowrap; }
 
     .intitule_plat{
         font-weight: bold;
         padding-top: 5px;
+        height: 15px;
     }
 
     .details_plat{
         font-size: 13px;
         padding-bottom: 5px;
+        height: 10px;
     }
 
     .prix_plat{
         font-weight: bold;
         padding-right: 20px;
         padding-top: 32px;
+        transition: all 1000ms;
     }
 
     .valider{
-        display: inline-block;
-        overflow: hidden;
-        flex-shrink: 0;
         background-color: #99E2D0;
         color: white;
         border-radius: 0px 15px 15px 0px;
@@ -567,7 +577,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: width 500ms;
+        transition: all 1s;
+        position: absolute;
+        right: -60px;
     }
 
     .commander{
