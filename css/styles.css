@@ -427,7 +427,7 @@
     #img_restaurant{
         width: 100%;
         object-fit: cover;
-        max-height: 600px;
+        max-height: 500px;
     }
 
     .menu{
@@ -491,7 +491,7 @@
     }
 
     .card_menu:hover .prix_plat{
-        margin-right: 25%; 
+        margin-right: 60px; 
         margin-left: 5%;
     }
 
@@ -651,12 +651,15 @@
     .alignement_plats{
         display:flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-around;
     }
 
     .titre_coeur{
         justify-content: center;
+    }
+
+    .card_menu{
+        width: 300px;
     }
     
     }
