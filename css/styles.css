@@ -254,7 +254,7 @@
         padding-left: 20px;
     }
 
-    .hover_etapes :hover{
+    .etapes:hover{
         background-color:#f9eeff;
         cursor:pointer;
 ;
@@ -400,6 +400,7 @@
 
     .titre_footer{
         font-family: 'Shrikhand', sans-serif;
+        margin-left: 40px;
     }
 
     .arrow_logo{
@@ -520,22 +521,22 @@
     }
 
     .card_1{
-        animation-delay: 50ms;
+        animation-delay: 100ms;
         animation-fill-mode: forwards;
     }
 
     .card_2{
-        animation-delay: 150ms;
+        animation-delay: 200ms;
         animation-fill-mode: forwards;
     }
 
     .card_3{
-        animation-delay: 250ms;
+        animation-delay: 300ms;
         animation-fill-mode: forwards;
     }
 
     .card_4{
-        animation-delay: 350ms;
+        animation-delay: 400ms;
         animation-fill-mode: forwards;
     }
 
