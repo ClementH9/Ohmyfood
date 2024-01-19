@@ -292,7 +292,7 @@
     }
 
     .card_restaurant:hover{
-        transform: scale(1.2)
+        transform: scale(1.05)
     }
 
     .card_restaurant a{
